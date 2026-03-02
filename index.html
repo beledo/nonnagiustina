@@ -1,27 +1,29 @@
 <!DOCTYPE html>
-
-<html class="dark" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Nonna Giustina</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<html class="dark" lang="es">
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Nonna Giustina</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect"/>
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+    <script src="https://cdn.commoninja.com/sdk/latest/commonninja.js" defer></script>
+    <script id="tailwind-config">
         tailwind.config = {
           darkMode: "class",
           theme: {
             extend: {
               colors: {
-                "primary": "#fefefd",
-                "secondary": "#2d3c46",
-                "accent-gold": "#C5A059",
-                "background-light": "#f8f6f6",
-                "background-dark": "#221010",
-                "surface-dark": "#2d1616",
+                "primary": "#bdc042",
+                "secondary": "#c1c53a",
+                "primary-dark": "#a6aa38",
+                "accent-gold": "#bdc042",
+                "background-light": "#f5f3eb",
+                "background-dark": "#0f1a12",
+                "surface-dark": "#16251a",
               },
               fontFamily: {
                 "display": ["Work Sans"]
@@ -31,298 +33,798 @@
           },
         }
     </script>
-<style>
+    <style>
         body { font-family: 'Work Sans', sans-serif; }
         .glass-nav {
             backdrop-filter: blur(10px);
-            background-color: rgba(34, 16, 16, 0.85);
+            background-color: rgba(15, 26, 18, 0.95);
+
         }
         .text-shadow-lg {
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
     </style>
+    <link rel="icon" type="image/png" href="imagenes/logo.png">
 </head>
 <body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-100 selection:bg-primary selection:text-white">
-<!-- Sticky Navigation -->
-<nav class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-white/5">
-<div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-<div class="flex items-center gap-2">
-<span class="text-primary text-3xl font-bold tracking-tighter">Nonna Giustina</span>
-<span class="text-accent-gold text-xs uppercase tracking-[0.3em] mt-1 font-medium">1908</span>
-</div>
-<div class="hidden md:flex items-center gap-10">
-<a class="text-sm uppercase tracking-widest hover:text-primary transition-colors" href="#specialties">Specialties</a>
-<a class="text-sm uppercase tracking-widest hover:text-primary transition-colors" href="#menu">Menu</a>
-<a class="text-sm uppercase tracking-widest hover:text-primary transition-colors" href="#reviews">Reviews</a>
-<a class="text-sm uppercase tracking-widest hover:text-primary transition-colors" href="#contact">Contact</a>
-</div>
 
+<nav class="fixed top-0 left-0 right-0 z-50 glass-nav border-b border-white/5 transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        
+        <a href="/" class="flex items-center gap-3 flex-shrink-0 hover:opacity-80 transition-opacity">
+            <img src="imagenes/logo.png" 
+                 alt="Nonna Giustina Logo"
+                 class="h-12 md:h-14 w-auto object-contain">
+            <div class="flex items-baseline gap-2">
+                <span class="text-primary text-xl md:text-3xl font-bold tracking-tighter">
+                    Nonna Giustina
+                </span>
+                <span class="text-accent-gold text-[10px] md:text-xs uppercase tracking-[0.3em] font-medium whitespace-nowrap">
+                    1908
+                </span>
+            </div>
+        </a>
 
-<div class="flex items-center gap-5">
-<a href="https://youtube.com" class="bg-secondary hover:bg-red-700 text-white px-6 py-2.5 rounded-lg text-sm font-semibold transition-all transform hover:scale-105 active:scale-95 shadow-lg shadow-primary/20 inline-block text-center">
-    RESERVE A TABLE
-</a>
+        <div class="hidden md:flex items-center gap-8">
+            <div class="flex items-center gap-8 mr-4">
+                <a class="text-sm uppercase tracking-widest hover:text-primary transition-colors text-slate-300" href="#specialties" data-i18n="nav.specialties">Specialties</a>
+                <a class="text-sm uppercase tracking-widest hover:text-primary transition-colors text-slate-300" href="https://www.tripadvisor.es/Restaurant_Review-g187463-d34200736-Reviews-Nonna_Giustina-Palma_de_Mallorca_Majorca_Balearic_Islands.html?m=69573" target="_blank" rel="noopener" data-i18n="nav.menu">Menu</a>
+                <a class="text-sm uppercase tracking-widest hover:text-primary transition-colors text-slate-300" href="#reviews" data-i18n="nav.reviews">Reviews</a>
+                <a class="text-sm uppercase tracking-widest hover:text-primary transition-colors text-slate-300" href="#faqs" data-i18n="nav.faqs">FAQs</a>
+                <a class="text-sm uppercase tracking-widest hover:text-primary transition-colors text-slate-300" href="#contact" data-i18n="nav.contact">Contact</a>
+                
+                
+            </div>
 
+            <div class="flex items-center space-x-1 bg-white/5 rounded-full px-3 py-1 border border-white/10">
+                <span class="material-symbols-outlined text-gray-400 text-[18px]">language</span>
+                <select id="language-switcher-desktop" class="bg-transparent border-none text-sm text-gray-300 focus:ring-0 cursor-pointer py-0 pl-1 pr-8 appearance-none">
+                    <option value="es" class="bg-zinc-900">ES</option>
+                    <option value="en" class="bg-zinc-900">EN</option>
+                    <option value="it" class="bg-zinc-900">IT</option>
+                    <option value="de" class="bg-zinc-900">DE</option>
+                </select>
+            </div>
 
+            <a href="https://wa.me/+34602428011?text=Hola%20quiero%20reservar%20una%20mesa"
+               target="_blank" rel="noopener noreferrer"
+               class="bg-secondary hover:bg-primary-dark text-white px-6 py-2.5 rounded-lg text-sm font-semibold transition-all transform hover:scale-105 shadow-lg shadow-primary/20">
+                RESERVE A TABLE
+            </a>
+        </div>
 
+        <div class="md:hidden flex items-center">
+    <button id="mobile-menu-button"
+            class="text-white focus:outline-none p-2 inline-block">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+    </button>
+        </div>
+    </div>
 
-
-</div>
-</div>
+    <div id="mobile-menu" class="hidden bg-surface-dark border-b border-white/10 shadow-2xl absolute w-full left-0 top-20 flex flex-col p-6 space-y-4">
+        <div class="mb-4">
+            <label class="text-xs uppercase tracking-widest text-slate-400 mb-2 block" data-i18n="nav.language">Language</label>
+            <select id="language-switcher-mobile" class="w-full bg-background-dark text-white border border-white/20 rounded px-3 py-2 text-sm">
+                <option value="es">Español</option>
+                <option value="it">Italiano</option>
+                <option value="de">Deutsch</option>
+                <option value="en">English</option>
+            </select>
+        </div>
+        <a class="text-white text-lg font-medium py-2 border-b border-white/5" href="#specialties" data-i18n="nav.specialties">Specialties</a>
+        <a class="text-white text-lg font-medium py-2 border-b border-white/5" href="#menu" target="_blank" data-i18n="nav.menu">Menu</a>
+        <a class="text-white text-lg font-medium py-2 border-b border-white/5" href="#reviews" data-i18n="nav.reviews">Reviews</a>
+        <a class="text-white text-lg font-medium py-2 border-b border-white/5" href="#faqs" data-i18n="nav.faqs">FAQs</a>
+        <a class="text-white text-lg font-medium py-2 border-b border-white/5" href="#contact" data-i18n="nav.contact">Contact</a>
+        
+        <a href="https://wa.me/+34602428011?text=Hola%20quiero%20reservar%20una%20mesa"
+           target="_blank" rel="noopener noreferrer"
+           class="bg-secondary text-white px-6 py-4 rounded-lg text-center font-bold shadow-lg">
+            RESERVE A TABLE
+        </a>
+    </div>
 </nav>
-<!-- Hero Section -->
-<header class="relative h-screen w-full flex items-center justify-center overflow-hidden">
-<div class="absolute inset-0 z-0">
-<img alt="Artisanal Wood Fired Pizza" class="w-full h-full object-cover" data-alt="Gourmet wood-fired pizza with fresh basil and mozzarella" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA5LhYA7mUtsEvSRiDp3znozF9rfRkD0NRChiRkjDFI-viKfybPPpu1MpYlthTe4S_k99vaZDKLrWBbM9q4UtBF7kfyTrw7EXpnY91_n07V6lsLwpJEynqYqWAdfbPPmhspqULrQe6jvNCi7jHOzpx4ogzbAJ9Dl0z5BH1ng8taZ-XiTNEeoCOO0ViqZ0KDnRNpTgYlDaKL_0tWuhDF7zQHyjKEiZfFJRhQsCcvv9Z_45xL-hE-SSE3erRKUVAHEWd2iI2qfsna_LcR"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/40 to-transparent"></div>
-</div>
-<div class="relative z-10 text-center px-4 max-w-4xl">
-<span class="inline-block px-4 py-1 border border-accent-gold text-accent-gold text-xs tracking-[0.5em] uppercase mb-6 mt-40 md:mt-0 rounded-full bg-accent-gold/5">
-  Est. 2022 Mallorca
-</span>
 
-<h1 class="text-6xl md:text-8xl font-bold text-white mb-6 tracking-tight text-shadow-lg leading-none">
-                Authentic Hearth.<br/>
-<span class="text-primary">Modern Elegance.</span>
-</h1>
-<p class="text-xl text-slate-300 mb-10 max-w-2xl mx-auto font-light leading-relaxed">
-                Experience the soul of Italy through our artisanal wood-fired ovens and generations of secret family recipes.
-            </p>
-<div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-<button class="w-full sm:w-auto bg-secondary text-white px-10 py-4 rounded-xl text-lg font-bold hover:bg-red-700 transition-colors">
-                    Explore Menu
-                </button>
-<button class="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-4 rounded-xl text-lg font-bold hover:bg-white/20 transition-colors">
-                    The Story
-                </button>
-</div>
-</div>
-<div 
-  onclick="window.scrollTo({ 
-    top: document.getElementById('specialties').offsetTop, 
-    behavior: 'smooth' 
-  })"
-  class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer"
->
-  <span class="material-symbols-outlined text-white/50 text-4xl">
-    keyboard_double_arrow_down
-  </span>
-</div>
-
-
-
-</header>
-<!-- Specialties Section -->
-<section class="py-24 bg-background-light dark:bg-background-dark" id="specialties">
-<div class="max-w-7xl mx-auto px-6">
-<div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-4">
-<div class="max-w-xl">
-<h2 class="text-accent-gold text-sm tracking-[0.3em] uppercase mb-2 font-semibold">Our Signatures</h2>
-<h3 class="text-4xl md:text-5xl font-bold dark:text-white">Crafted by Hand, <br/> Perfected by Fire</h3>
-</div>
-<div class="h-1 bg-primary w-24 mb-4"></div>
-</div>
-<div class="grid md:grid-cols-2 gap-8">
-<!-- Pizza Card -->
-<div class="group relative overflow-hidden rounded-xl aspect-[4/5]">
-<img alt="La Pizza" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Traditional Neapolitan pizza with leopard spotting on crust" src="../NonnaGiustina/imagenes/pizza formaggi.png"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-80"></div>
-<div class="absolute bottom-0 left-0 p-10">
-<h4 class="text-white text-3xl font-bold mb-3">La Pizza</h4>
-<p class="text-slate-300 mb-6 max-w-sm font-light">
-                            72-hour cold fermented dough, San Marzano tomatoes, and hand-stretched mozzarella baked at 450°C.
-                        </p>
-<a class="inline-flex items-center text-primary font-bold group-hover:translate-x-2 transition-transform" href="#">
-                            VIEW PIZZA MENU <span class="material-symbols-outlined ml-2">arrow_forward</span>
-</a>
-</div>
-</div>
-<!-- Pasta Card -->
-<div class="group relative overflow-hidden rounded-xl aspect-[4/5]">
-<img alt="La Pasta" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="Plated artisan pasta with rich tomato sauce and herbs" src="../NonnaGiustina/imagenes/pasta.png"/>
-<div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-80"></div>
-<div class="absolute bottom-0 left-0 p-10">
-<h4 class="text-white text-3xl font-bold mb-3">Nuestros Platos</h4>
-<p class="text-slate-300 mb-6 max-w-sm font-light">
-                            House-made bronze-cut pasta tossed in sauces slow-cooked for hours using the season's finest imports.
-                        </p>
-<a class="inline-flex items-center text-primary font-bold group-hover:translate-x-2 transition-transform" href="#">
-                            VIEW MENU <span class="material-symbols-outlined ml-2">arrow_forward</span>
-</a>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Carousel Section (Atmosphere) -->
-<section class="bg-surface-dark py-24 overflow-hidden">
-<div class="max-w-7xl mx-auto px-6 mb-12">
-<h2 class="text-center text-3xl font-bold dark:text-white uppercase tracking-widest">The Atmosphere</h2>
-<div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
-</div>
-<div class="flex gap-4 px-6 overflow-x-auto pb-8 scrollbar-hide no-scrollbar">
-<div class="min-w-[300px] md:min-w-[500px] h-80 rounded-xl overflow-hidden shadow-2xl">
-<img alt="Restaurant Interior" class="w-full h-full object-cover" data-alt="Dimly lit elegant restaurant interior with wine racks" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbcYHZw87Xu8J2bYbRDtn5-mmas-erUngecZsJaChUcii2xTbmqAbRy75Q_CEMWJN3M8drjytWIF6K9nUe8u7VmE91KgaVaCRaY7B-m3FW-JHmDuDqKDxLFa2PHiPR-pJDKQQwPcsV9HNFMBElFmdqU0JETpoSAU4zS6PHBkbpBf6ZpTbdiKTSYHWGvTMs104nC9zBkch8cs_0P8xqG1aqWZi6yovmmAWZIfgxRkdhmDs4ZsazgeFiwfiLKeD2E9hLJ3Anve5QGONB"/>
-</div>
-<div class="min-w-[300px] md:min-w-[500px] h-80 rounded-xl overflow-hidden shadow-2xl">
-<img alt="Bar Counter" class="w-full h-full object-cover" data-alt="Modern cocktail bar with amber lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0PZl6hQ23P_HeJdvVB0dOYTc_hugRwbjVjgwDLnsXkF7rVqxUz5Wmihi6V6VTttGvbbJfbEaqrLDaDNWztRJ3BuwU5pzxN_y_5Qa5nSSq2LG-i1YIjDuQ19Ze4jJligRXrWQDru1J_0z40rT2QWYDcRvhnOiVlHamRzZXWRQeQLKl5ykFcQC1L2VmhRIA2eIekebCMlq2xCIX43fTMF_lXC7tQdnF9Cj5hoFZGXwtQw_7ZWxJjHV3fpYxC1xh6uDV-oa1bF1mOPRn"/>
-</div>
-<div class="min-w-[300px] md:min-w-[500px] h-80 rounded-xl overflow-hidden shadow-2xl">
-<img alt="Private Table" class="w-full h-full object-cover" data-alt="Romantic candlelit dinner table setup" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNVKGapkr8N2PFpT_H0R8ggNteEZRWppvRVteDtYZDSNeMIihWho_9JRQbgyZpn4O2NmRd8j8Ijlw_QAVVYhlPILxr8bHff-q9Vet9z-TcVLmHhZJIByvtXQesqeaT_H6afXhr41TB8NINmMnaj_zQ3lT7DmdpmNtSMUpWOdRLNSelaep2j09Bmu9Dt7m3lhw0UMLXabIRm11fQvLwfdFMVsbeNPHqWOwzgadk6BPvSK3iODZLIWkoEZQRW7vZzdrVip2i-6r0LGlx"/>
-</div>
-<div class="min-w-[300px] md:min-w-[500px] h-80 rounded-xl overflow-hidden shadow-2xl">
-<img alt="Open Kitchen" class="w-full h-full object-cover" data-alt="Chef working at a pizza oven with flames" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCX-dI2w1bIFjvX2damXWdM27eHCf_9vfFdWxhf6Uhv_u2orVU-jLFjv_PfZEAC6glggQedeT6hcLq5Owa8oQwo48piTlUd63yQ0XrX7H7Y1smWYSwA7JFGP832hw_ORSB2uj9cVT1MUHXsQwMR7VkPLBx4CwTfVHSV4YaAb4O3CqafGAGkqzR-plsPILyoq9otHd-rEgfIP2D8EgA5RhlNnoQ4-ySALfs5jQeKYisDVGOccbhomqJaCkqd1BaKnLQ5hYB602VXETIF"/>
-</div>
-</div>
-</section>
-<!-- Customer Reviews -->
-<section class="py-24" id="reviews">
-<div class="max-w-7xl mx-auto px-6">
-<div class="grid lg:grid-cols-3 gap-12 items-center">
-<div class="lg:col-span-1">
-<h2 class="text-accent-gold text-sm tracking-[0.3em] uppercase mb-2 font-semibold">Testimonials</h2>
-<h3 class="text-4xl font-bold dark:text-white mb-6">What our guests are saying</h3>
-<p class="text-slate-400 mb-8 font-light">We pride ourselves on providing an unforgettable culinary experience. Rated 4.9/5 stars across all major platforms.</p>
-<div class="flex gap-6 grayscale opacity-60">
-<div class="flex flex-col items-center">
-<span class="text-xs uppercase tracking-tighter mb-2">Review us on</span>
-<div class="h-8 w-24 bg-white/10 rounded-md flex items-center justify-center p-2">
-<span class="font-bold text-white text-xs">GOOGLE</span>
-</div>
-</div>
-<div class="flex flex-col items-center">
-<span class="text-xs uppercase tracking-tighter mb-2">Review us on</span>
-<div class="h-8 w-24 bg-white/10 rounded-md flex items-center justify-center p-2">
-<span class="font-bold text-white text-xs">TripAdvisor</span>
-</div>
-</div>
-</div>
-</div>
-<div class="lg:col-span-2 grid md:grid-cols-2 gap-6">
-<!-- Review 1 -->
-<div class="bg-surface-dark p-8 rounded-xl border border-white/5 shadow-xl">
-<div class="flex text-primary mb-4">
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-</div>
-<p class="text-slate-300 italic mb-6">"The best truffle pasta I've ever had outside of Florence. The atmosphere is cozy yet incredibly high-end. A must-visit!"</p>
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">JD</div>
-<div>
-<h5 class="font-bold text-white">James Dalton</h5>
-<p class="text-xs text-slate-500 uppercase">Local Guide</p>
-</div>
-</div>
-</div>
-<!-- Review 2 -->
-<div class="bg-surface-dark p-8 rounded-xl border border-white/5 shadow-xl">
-<div class="flex text-primary mb-4">
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-<span class="material-symbols-outlined fill-1">star</span>
-</div>
-<p class="text-slate-300 italic mb-6">"Their Diavola pizza has the perfect level of spice. The crust is thin, airy, and has that perfect char. Amazing wine list too."</p>
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">SR</div>
-<div>
-<h5 class="font-bold text-white">Sofia Rossi</h5>
-<p class="text-xs text-slate-500 uppercase">TripAdvisor Reviewer</p>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Footer / Contact -->
-<footer class="bg-background-dark border-t border-white/5 pt-20 pb-10" id="contact">
-<div class="max-w-7xl mx-auto px-6">
-<div class="grid md:grid-cols-4 gap-12 mb-20">
-<div class="col-span-1 md:col-span-1">
-<div class="flex items-center gap-2 mb-6">
-<span class="text-primary text-2xl font-bold tracking-tighter">Nonna Giustina</span>
-<span class="text-accent-gold text-[10px] uppercase tracking-[0.3em] font-medium">1908</span>
-</div>
-<p class="text-slate-500 text-sm leading-relaxed mb-6">
-                        Bringing the authentic flavors of Milan to your table since 1994. Experience fine Italian dining in the heart of the city.
-                    </p>
-<div class="flex gap-4">
-<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all" href="#">
-<span class="material-symbols-outlined text-sm">public</span>
-</a>
-<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all" href="#">
-<span class="material-symbols-outlined text-sm">share</span>
-</a>
-<a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all" href="#">
-<span class="material-symbols-outlined text-sm">mail</span>
-</a>
-</div>
-</div>
-<div>
-<h6 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Opening Hours</h6>
-<ul class="text-slate-400 text-sm space-y-3">
-<li class="flex justify-between"><span>Thu - Sat</span> <span>19:00 - 23:00</span></li>
-<li class="flex justify-between"><span>Sunday</span> <span>14:00 - 17:00</span></li>
-<li class="text-accent-gold mt-4 font-medium italic">Closed on Mondays</li>
-</ul>
-</div>
-<div>
-<h6 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Quick Links</h6>
-<ul class="text-slate-400 text-sm space-y-3">
-<li><a class="hover:text-primary transition-colors" href="#">Digital Menu</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Reservations</a></li>
-<li><a class="hover:text-primary transition-colors" href="#">Private Events</a></li>
-</ul>
-</div>
-<div>
-<h6 class="text-white font-bold mb-6 uppercase tracking-widest text-xs">Location</h6>
-<div class="rounded-lg overflow-hidden h-32 mb-4 bg-white/5">
-<iframe
-  class="w-full h-full hover:grayscale transition-all"
-  src="https://www.google.com/maps?q=Avenida+Joan+Miró+98,+07015+Palma+de+Mallorca&output=embed"
-  loading="lazy"
-  style="border:0;">
-</iframe>
-
-</div>
-<p class="text-slate-400 text-xs">
-                        Av. Joan Mirò 98,<br/>
-                        07015 Palma de Mallorca, Spain
-                    </p>
-</div>
-</div>
-<div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-600 text-[10px] uppercase tracking-widest">
-<p>© 2026 Nonna Giustina. All Rights Reserved.</p>
-<div class="flex gap-6">
-<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
-<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
-</div>
-</div>
-</div>
-</footer>
-<!-- WhatsApp Floating Button -->
-<a class="fixed bottom-8 right-8 z-[60] bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform active:scale-90 group" href="https://wa.me/+34602428011">
-<svg fill="currentColor" height="32" viewbox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
-<path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.319 1.592 5.548 0 10.058-4.51 10.06-10.059.002-2.696-1.047-5.23-2.956-7.139-1.909-1.909-4.442-2.959-7.138-2.96-5.551 0-10.062 4.511-10.065 10.061-.001 2.105.56 4.14 1.621 5.924l-.991 3.619 3.75-.983l-.001-.001zm10.115-6.733c-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.668.149-.198.297-.767.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"></path>
-</svg>
-<span class="absolute right-20 bg-white text-background-dark py-2 px-4 rounded-lg text-xs font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-xl border border-background-dark/10 pointer-events-none">
-            Chat with us on WhatsApp
+<header class="relative min-h-[100dvh] w-full flex items-center justify-center overflow-hidden pb-16 pt-20">
+    <div class="absolute inset-0 z-0">
+        <img alt="Artisanal Wood Fired Pizza" class="w-full h-full object-cover" data-alt="Gourmet wood-fired pizza with fresh basil and mozzarella" src="imagenes/logo-ext.png"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-background-dark/50 to-transparent"></div>
+    </div>
+    
+    <div class="relative z-10 text-center px-4 max-w-4xl w-full flex flex-col items-center justify-center h-full">
+        <span class="inline-block px-4 py-1 border border-accent-gold text-accent-gold text-xs tracking-[0.5em] uppercase mb-4 mt-10 md:mt-0 rounded-full bg-accent-gold/5 backdrop-blur-sm" data-i18n="hero.est">
+          Est. 2022 Mallorca
         </span>
+
+        <h1 class="text-5xl sm:text-6xl md:text-8xl font-bold text-white mb-6 tracking-tight text-shadow-lg leading-none" data-i18n="hero.title1">
+            Horno<br/>
+            <span class="text-primary" data-i18n="hero.title2">Modern Elegance.</span>
+        </h1>
+        
+        <p class="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto font-light leading-relaxed px-2" data-i18n="hero.subtitle">
+            Experience the soul of Italy through our artisanal wood-fired ovens and generations of secret family recipes.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto">
+            <a class="w-full sm:w-auto bg-secondary text-white px-10 py-4 rounded-xl text-lg font-bold hover:bg-primary-dark transition-colors shadow-lg shadow-black/30 inline-block text-center"
+   href="https://www.tripadvisor.es/Restaurant_Review-g187463-d34200736-Reviews-Nonna_Giustina-Palma_de_Mallorca_Majorca_Balearic_Islands.html?m=69573"
+   target="_blank"
+   rel="noopener"
+   data-i18n="hero.ctaMenu">
+    Explore Menu
 </a>
+            <a href="#specialties" class="w-full sm:w-auto bg-white/10 backdrop-blur-md border border-white/20 text-white px-10 py-4 rounded-xl text-lg font-bold hover:bg-white/20 transition-colors text-center inline-block" data-i18n="hero.ctaStory">
+                The Story
+            </a>
+        </div>
+    </div>
+
+    <div 
+      onclick="document.getElementById('specialties').scrollIntoView({ behavior: 'smooth' })"
+      class="absolute bottom-6 md:bottom-10 left-1/2 -translate-x-1/2 animate-bounce cursor-pointer z-20 p-2"
+    >
+      <span class="material-symbols-outlined text-white/70 text-4xl">
+        keyboard_double_arrow_down
+      </span>
+    </div>
+</header>
+
+<section class="py-24 bg-background-light dark:bg-background-dark" id="specialties">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="flex flex-col md:flex-row items-end justify-between mb-16 gap-4">
+      <div class="max-w-xl">
+        <h2 class="text-accent-gold text-sm tracking-[0.3em] uppercase mb-2 font-semibold" data-i18n="specialties.label">
+          Our Signatures
+        </h2>
+        <h3 class="text-4xl md:text-5xl font-bold dark:text-white" data-i18n="specialties.title">
+          Crafted by Hand, <br /> Perfected by Fire
+        </h3>
+      </div>
+      <div class="h-1 bg-primary w-24 mb-4 hidden md:block"></div>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-8">
+      <div onclick="openGallery('pasta')" class="group relative overflow-hidden rounded-xl aspect-[4/5] shadow-2xl cursor-pointer">
+        <img src="imagenes/pasta.png" alt="La Pasta" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-90"></div>
+        <div class="absolute bottom-0 left-0 p-8 md:p-10 flex flex-col items-start">
+          <h4 class="text-slate-900 dark:text-white text-3xl font-bold mb-3" data-i18n="specialties.pasta.title">
+            Nuestros Platos
+          </h4>
+          <p class="bg-slate-100/20 dark:bg-slate-800/20 inline-block px-2 py-1 rounded text-slate-800 dark:text-white md:text-slate-300 mb-6 max-w-sm font-normal md:font-light" data-i18n="specialties.pasta.desc">
+            House-made bronze-cut pasta tossed in sauces slow-cooked for hours using the season's finest imports.
+          </p>
+          <span class="inline-flex items-center text-primary font-bold group-hover:translate-x-2 transition-transform">
+            VIEW MENU <span class="material-symbols-outlined ml-2">arrow_forward</span>
+          </span>
+        </div>
+      </div> <div onclick="openGallery('pizza')" class="group relative overflow-hidden rounded-xl aspect-[4/5] shadow-2xl cursor-pointer">
+        <img src="imagenes/pizza-formaggi.png" alt="La Pizza" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" />
+        <div class="absolute inset-0 bg-gradient-to-t from-background-dark via-transparent to-transparent opacity-90"></div>
+        <div class="absolute bottom-0 left-0 p-8 md:p-10 flex flex-col items-start">
+          <h4 class="text-slate-900 dark:text-white text-3xl font-bold mb-3" data-i18n="specialties.pizza.title">
+            La Pizza
+          </h4>
+          <p class="bg-slate-100/20 dark:bg-slate-800/20 inline-block px-2 py-1 rounded text-slate-800 dark:text-white md:text-slate-300 mb-6 max-w-sm font-normal md:font-light" data-i18n="specialties.pizza.desc">
+            72-hour cold fermented dough, San Marzano tomatoes, and hand-stretched mozzarella baked at 450°C.
+          </p>
+          <span class="inline-flex items-center text-primary font-bold group-hover:translate-x-2 transition-transform">
+            VIEW PIZZA MENU <span class="material-symbols-outlined ml-2">arrow_forward</span>
+          </span>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+<section class="bg-surface-dark py-24 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 mb-12">
+        <h2 class="text-center text-3xl font-bold dark:text-white uppercase tracking-widest" data-i18n="atmosphere.title">The Atmosphere</h2>
+        <div class="w-20 h-1 bg-primary mx-auto mt-4"></div>
+    </div>
+    <div class="flex gap-4 px-6 overflow-x-auto pb-8 scrollbar-hide no-scrollbar">
+        <div class="min-w-[300px] md:min-w-[500px] h-80 rounded-xl overflow-hidden shadow-2xl">
+            <img alt="Restaurant Interior" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Dimly lit elegant restaurant interior with wine racks" src="imagenes/interior4.jpg"/>
+        </div>
+        <div class="min-w-[300px] md:min-w-[500px] h-80 rounded-xl overflow-hidden shadow-2xl">
+            <img alt="Bar Counter" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Modern cocktail bar with amber lighting" src="imagenes/interior3.jpg"/>
+        </div>
+        <div class="min-w-[300px] md:min-w-[500px] h-80 rounded-xl overflow-hidden shadow-2xl">
+            <img alt="Private Table" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Romantic candlelit dinner table setup" src="imagenes/interior2.jpg"/>
+        </div>
+        <div class="min-w-[300px] md:min-w-[500px] h-80 rounded-xl overflow-hidden shadow-2xl">
+            <img alt="Open Kitchen" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" data-alt="Chef working at a pizza oven with flames" src="imagenes/interior.jpg"/>
+        </div>
+    </div>
+</section>
+
+
+<section class="py-24 bg-background-light dark:bg-background-dark border-t border-white/5" id="faqs">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-16">
+            <h2 class="text-accent-gold text-sm tracking-[0.3em] uppercase mb-2 font-semibold" data-i18n="faq.label">
+                Información Útil
+            </h2>
+            <h3 class="text-4xl font-bold dark:text-white" data-i18n="faq.title">
+                Preguntas Frecuentes
+            </h3>
+            <div class="w-20 h-1 bg-primary mx-auto mt-6"></div>
+        </div>
+        
+        <div class="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
+            <div class="bg-surface-dark p-6 md:p-8 rounded-xl border border-white/5 shadow-xl flex items-start gap-4 hover:-translate-y-1 transition-transform">
+                <span class="material-symbols-outlined text-primary text-3xl shrink-0">credit_card</span>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-2" data-i18n="faq.payments.title">Pagos con Tarjeta</h4>
+                    <p class="text-slate-400 font-light leading-relaxed" data-i18n="faq.payments.desc">
+                        Aceptamos pagos con tarjeta de crédito o débito para consumos a partir de 30€.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-surface-dark p-6 md:p-8 rounded-xl border border-white/5 shadow-xl flex items-start gap-4 hover:-translate-y-1 transition-transform">
+                <span class="material-symbols-outlined text-primary text-3xl shrink-0">accessible_forward</span>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-2" data-i18n="faq.access.title">Accesibilidad</h4>
+                    <p class="text-slate-400 font-light leading-relaxed" data-i18n="faq.access.desc">
+                        Debido a la arquitectura de nuestro local, lamentablemente no contamos con acceso adaptado para sillas de ruedas.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-surface-dark p-6 md:p-8 rounded-xl border border-white/5 shadow-xl flex items-start gap-4 hover:-translate-y-1 transition-transform">
+                <span class="material-symbols-outlined text-primary text-3xl shrink-0">pets</span>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-2" data-i18n="faq.pets.title">Mascotas</h4>
+                    <p class="text-slate-400 font-light leading-relaxed" data-i18n="faq.pets.desc">
+                        Para garantizar la comodidad de todos nuestros comensales durante el servicio, no se permite el ingreso con mascotas.
+                    </p>
+                </div>
+            </div>
+
+            <div class="bg-surface-dark p-6 md:p-8 rounded-xl border border-white/5 shadow-xl flex items-start gap-4 hover:-translate-y-1 transition-transform">
+                <span class="material-symbols-outlined text-primary text-3xl shrink-0">smoke_free</span>
+                <div>
+                    <h4 class="text-white font-bold text-lg mb-2" data-i18n="faq.smoking.title">Espacio sin Humo</h4>
+                    <p class="text-slate-400 font-light leading-relaxed" data-i18n="faq.smoking.desc">
+                        Somos un establecimiento 100% libre de humo. No está permitido fumar en ninguna de nuestras instalaciones.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<section class="py-24" id="reviews">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-3 gap-12 items-center">
+            <div class="lg:col-span-1">
+                <h2 class="text-accent-gold text-sm tracking-[0.3em] uppercase mb-2 font-semibold" data-i18n="reviews.label">Testimonials</h2>
+                <h3 class="text-4xl font-bold dark:text-white mb-6" data-i18n="reviews.title">What our guests are saying</h3>
+                <p class="text-slate-400 mb-8 font-light" data-i18n="reviews.subtitle">We pride ourselves on providing an unforgettable culinary experience. Rated 4.9/5 stars across all major platforms.</p>
+                <div class="flex gap-6 grayscale opacity-60">
+                    <div class="flex flex-col items-center">
+                        <span class="text-xs uppercase tracking-tighter mb-2" data-i18n="reviews.reviewsUs">Review us on</span>
+                        <div class="h-8 w-24 bg-white/10 rounded-md flex items-center justify-center p-2">
+                            <a href="https://reviewthis.biz/nonnagiustina" 
+   target="_blank"
+   rel="noopener noreferrer"
+   class="font-bold text-white text-xs hover:underline">
+   GOOGLE
+</a>
+
+                        </div>
+                    </div>
+                    <div class="flex flex-col items-center">
+                        <span class="text-xs uppercase tracking-tighter mb-2" data-i18n="reviews.reviewsUs">Review us on</span>
+                        <div class="h-8 w-24 bg-white/10 rounded-md flex items-center justify-center p-2">
+                            <a href="https://www.tripadvisor.es/UserReviewEdit-g187463-d34200736-Nonna_Giustina-Palma_de_Mallorca_Majorca_Balearic_Islands.html" 
+   target="_blank"
+   rel="noopener noreferrer"
+   class="font-bold text-white text-xs hover:underline">
+   TripAdvisor
+</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="lg:col-span-2 grid md:grid-cols-2 gap-6">
+                <div class="bg-surface-dark p-8 rounded-xl border border-white/5 shadow-xl hover:-translate-y-1 transition-transform">
+                    <div class="flex text-primary mb-4">
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                    </div>
+                    <a href="https://maps.app.goo.gl/cENYJdi8NhtUUMGs6" 
+   target="_blank" 
+   rel="noopener noreferrer"
+   class="block text-slate-300 italic mb-6" data-i18n="reviews.reviews1">
+   "A very cozy place with amazing owners — you feel right at home while enjoying their wonderful food."
+</a>
+
+
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">JD</div>
+                        <div>
+                            <h5 class="font-bold text-white">Amparo Y.S</h5>
+                            <p class="text-xs text-slate-500 uppercase">Local Guide - Google</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-surface-dark p-8 rounded-xl border border-white/5 shadow-xl hover:-translate-y-1 transition-transform">
+                    <div class="flex text-primary mb-4">
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                        <span class="material-symbols-outlined fill-1">star</span>
+                    </div>
+                    <p class="text-slate-300 italic mb-6" data-i18n="reviews.reviews2">"Excellent service, very personalized, and attended by the owners themselves. The dishes are well-portioned and everything is very delicious. I really liked that it’s a very calm and family-friendly place."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center text-primary font-bold">SR</div>
+                        <div>
+                            <h5 class="font-bold text-white">Sergio Salinas</h5>
+                            <p class="text-xs text-slate-500 uppercase">TripAdvisor Reviewer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="w-full max-w-6xl mx-auto px-6 py-16">
+  <div class="commonninja_component pid-e48821ff-0279-4a2d-88db-9869b75f5d63"></div>
+</div>
+    
+</section>
+
+<section class="py-24 bg-surface-dark border-t border-white/5" id="contact">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-2 gap-16 items-start">
+            
+            <div>
+                <h2 class="text-accent-gold text-sm tracking-[0.3em] uppercase mb-2 font-semibold" data-i18n="contact.label">Get in Touch</h2>
+                <h3 class="text-4xl font-bold dark:text-white mb-6" data-i18n="contact.title">Have a question or request?</h3>
+                <p class="text-slate-400 mb-10 font-light leading-relaxed" data-i18n="contact.subtitle">
+                    Whether you want to contact us have dietary concerns, or simply want to say hello, fill out the form and our team will reach out shortly.
+                </p>
+                
+                <div class="space-y-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-accent-gold shrink-0">
+                            <span class="material-symbols-outlined">phone</span>
+                        </div>
+                        <div>
+                            <h5 class="text-white font-bold uppercase text-sm tracking-widest mb-1" data-i18n="contact.phone">Phone</h5>
+                            <p class="text-slate-400 font-light">+34 602 42 80 11</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-accent-gold shrink-0">
+                            <span class="material-symbols-outlined">mail</span>
+                        </div>
+                        <div>
+                            <h5 class="text-white font-bold uppercase text-sm tracking-widest mb-1" data-i18n="contact.email">Email</h5>
+                            <p class="text-slate-400 font-light">nonnagiustina1908@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-background-dark/50 p-8 md:p-10 rounded-2xl border border-white/5 shadow-2xl backdrop-blur-sm">
+                <form
+  action="https://formspree.io/f/xreaynae"
+  method="POST"
+>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="space-y-2">
+            <label for="nombre" class="text-xs uppercase tracking-widest text-slate-400 font-semibold ml-1" data-i18n="form.name">Nombre</label>
+            <input type="text" name="nombre" id="nombre" placeholder="John" required
+                class="w-full bg-background-dark border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition-all">
+        </div>
+        <div class="space-y-2">
+            <label for="apellido" class="text-xs uppercase tracking-widest text-slate-400 font-semibold ml-1" data-i18n="form.lastname">Apellido</label>
+            <input type="text" name="apellido" id="apellido" placeholder="Doe" required
+                class="w-full bg-background-dark border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition-all">
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="space-y-2">
+            <label for="email" class="text-xs uppercase tracking-widest text-slate-400 font-semibold ml-1" data-i18n="form.mail">Mail</label>
+            <input type="email" name="email" id="email" placeholder="john@example.com" required
+                class="w-full bg-background-dark border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition-all">
+        </div>
+        <div class="space-y-2">
+            <label for="telefono" class="text-xs uppercase tracking-widest text-slate-400 font-semibold ml-1" data-i18n="form.phone">Teléfono</label>
+            <input type="tel" name="telefono" id="telefono" placeholder="+34 000 000 000" 
+                class="w-full bg-background-dark border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition-all">
+        </div>
+    </div>
+
+    <div class="space-y-2">
+        <label for="consulta" class="text-xs uppercase tracking-widest text-slate-400 font-semibold ml-1" data-i18n="form.message">Consulta</label>
+        <textarea name="mensaje" id="consulta" rows="4" placeholder="How can we help you?" required
+            class="w-full bg-background-dark border border-white/10 rounded-lg px-4 py-3 text-white placeholder-slate-600 focus:outline-none focus:border-accent-gold focus:ring-1 focus:ring-accent-gold transition-all resize-none"></textarea>
+    </div>
+
+    <button type="submit" class="w-full bg-secondary hover:bg-primary-dark text-white font-bold py-4 rounded-xl transition-all transform hover:scale-[1.02] active:scale-[0.98] shadow-lg mt-2 uppercase tracking-widest text-sm" data-i18n="form.send">
+        Send Message
+    </button>
+</form>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<footer class="bg-background-dark border-t border-white/5 pt-20 pb-10">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-4 gap-12 mb-20">
+            <div class="col-span-1 md:col-span-1">
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="text-primary text-2xl font-bold tracking-tighter">Nonna Giustina</span>
+                    <span class="text-accent-gold text-[10px] uppercase tracking-[0.3em] font-medium">1908</span>
+                </div>
+                <p class="text-slate-500 text-sm leading-relaxed mb-6" data-i18n="footer.description">
+                    Bringing the authentic flavors of Milan to your table since 1994. Experience fine Italian dining in the heart of the city.
+                </p>
+                <div class="flex gap-4">
+                    <a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all text-white hover:text-secondary" href="#">
+                        <span class="material-symbols-outlined text-sm">public</span>
+                    </a>
+                    <a id="share-btn"
+   class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all text-white hover:text-secondary cursor-pointer">
+    <span class="material-symbols-outlined text-sm">share</span>
+</a>
+
+
+                    <a class="w-10 h-10 rounded-full border border-white/10 flex items-center justify-center hover:bg-primary hover:border-primary transition-all text-white hover:text-secondary"
+   href="mailto:nonnagiustina1908@gmail.com">
+    <span class="material-symbols-outlined text-sm">mail</span>
+</a>
+
+                </div>
+            </div>
+            <div>
+                <h6 class="text-white font-bold mb-6 uppercase tracking-widest text-xs" data-i18n="footer.hours">Opening Hours</h6>
+                <ul class="text-slate-400 text-sm space-y-3">
+                    <li class="flex justify-between"><span>Thu - Sat</span> <span>19:00 - 23:00</span></li>
+                    <li class="flex justify-between"><span>Sunday</span> <span>14:00 - 17:00</span></li>
+                    <li class="text-accent-gold mt-4 font-medium italic">Closed on Mondays</li>
+                </ul>
+            </div>
+            <div>
+                <h6 class="text-white font-bold mb-6 uppercase tracking-widest text-xs" data-i18n="footer.links">Quick Links</h6>
+                <ul class="text-slate-400 text-sm space-y-3">
+                        <li><a class="hover:text-primary transition-colors" href="https://www.tripadvisor.es/Restaurant_Review-g187463-d34200736-Reviews-Nonna_Giustina-Palma_de_Mallorca_Majorca_Balearic_Islands.html?m=69573">Digital Menu</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="https://wa.me/+34602428011?text=Hola%20quiero%20reservar%20una%20mesa" target="_blank"
+   rel="noopener noreferrer">Reservations</a></li>
+                        <li><a class="hover:text-primary transition-colors" href="#contact">Contact us</a></li>
+                </ul>
+            </div>
+            <div>
+    <h6 class="text-white font-bold mb-6 uppercase tracking-widest text-xs" data-i18n="footer.location">Location</h6>
+        
+    
+    <div class="rounded-lg overflow-hidden h-32 mb-4 bg-white/5 border border-white/10 transition-transform duration-500 hover:scale-105 shadow-lg">
+            <iframe
+              class="w-full h-full hover:grayscale-0 transition-all duration-700"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d742.781895427222!2d2.6256428217351346!3d39.561779200568466!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x129793f7b22db9cd%3A0xe3af142eeaec26e0!2sNonna%20Giustina!5e0!3m2!1ses!2ses!4v1771236741624!5m2!1ses!2ses"
+              loading="lazy"
+              style="border:0;">
+            </iframe>
+        </div>
+
+                <p class="text-slate-400 text-xs">
+                    Av. Joan Mirò 98,<br/>
+                    07015 Palma de Mallorca, Spain
+                </p>
+            </div>
+        </div>
+        <div class="border-t border-white/5 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-slate-600 text-[10px] uppercase tracking-widest" data-i18n="footer.rights">
+            <p>© 2026 Nonna Giustina. All Rights Reserved.</p>
+            <div class="flex gap-6">
+                <a class="hover:text-white transition-colors" href="#" data-i18n="footer.privacy">Privacy Policy</a>
+                <a class="hover:text-white transition-colors" href="#" data-i18n="footer.terms">Terms of Service</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<a class="fixed bottom-8 right-8 z-[60] bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-2xl hover:scale-110 transition-transform active:scale-90 group" href="https://wa.me/+34602428011?text=Hola%20quiero%20reservar%20una%20mesa"> 
+    <svg fill="currentColor" height="32" viewbox="0 0 24 24" width="32" xmlns="http://www.w3.org/2000/svg">
+        <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.319 1.592 5.548 0 10.058-4.51 10.06-10.059.002-2.696-1.047-5.23-2.956-7.139-1.909-1.909-4.442-2.959-7.138-2.96-5.551 0-10.062 4.511-10.065 10.061-.001 2.105.56 4.14 1.621 5.924l-.991 3.619 3.75-.983l-.001-.001zm10.115-6.733c-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.668.149-.198.297-.767.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414-.074-.124-.272-.198-.57-.347z"></path>
+    </svg>
+    <span class="absolute right-20 bg-white text-background-dark py-2 px-4 rounded-lg text-xs font-bold whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity shadow-xl border border-background-dark/10 pointer-events-none" data-i18n="whatsapp.tooltip">
+        Chat with us on WhatsApp
+    </span>
+</a>
+
+
+<!-- ========================= -->
+<!-- GALERÍA MODAL CARRUSEL  -->
+<!-- ========================= -->
+
+<div id="gallery-modal" class="fixed inset-0 bg-black/90 backdrop-blur-md hidden items-center justify-center z-[200] transition-opacity duration-300">
+
+  <button id="close-gallery" 
+          class="absolute top-6 right-6 text-white text-4xl font-light hover:scale-110 transition-transform z-[210] touch-manipulation select-none">
+    ×
+  </button>
+
+  <button id="prev-btn" 
+          class="absolute left-6 text-white text-5xl hover:scale-110 transition-transform z-[210] touch-manipulation select-none">
+    ❮
+  </button>
+
+  <img id="gallery-image"
+       src=""
+       class="max-h-[85vh] max-w-[90vw] rounded-2xl shadow-2xl object-contain transition-opacity duration-300 select-none">
+
+  <button id="next-btn" 
+          class="absolute right-6 text-white text-5xl hover:scale-110 transition-transform z-[210] touch-manipulation select-none">
+    ❯
+  </button>
+
+</div>
 
 
 <script>
-  const btn = document.getElementById('mobile-menu-button');
-  const menu = document.getElementById('mobile-menu');
+    // --- LÓGICA DEL MENÚ MÓVIL ---
+    const menuBtn = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-  btn.addEventListener('click', () => {
-    menu.classList.toggle('hidden');
-  });
+    if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Opcional: Cerrar el menú al hacer clic en un enlace
+        mobileMenu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    }
+
+    // --- LÓGICA DE TRADUCCIÓN ---
+    const desktopSwitcher = document.getElementById('language-switcher-desktop');
+    const mobileSwitcher = document.getElementById('language-switcher-mobile');
+
+    async function loadLanguage(lang) {
+        try {
+            // Usamos una ruta relativa sin el punto inicial para evitar conflictos en GitHub
+            const path = `i18n/${lang}.json`;
+            console.log("Intentando cargar:", path);
+
+            const response = await fetch(path);
+            
+            if (!response.ok) {
+                throw new Error(`Error ${response.status}: No se encontró el archivo ${path}`);
+            }
+
+            const translations = await response.json();
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const keyPath = el.getAttribute('data-i18n');
+                const keys = keyPath.split('.');
+                let text = translations;
+
+                // Navegamos por el objeto JSON (ej: nav -> specialties)
+                keys.forEach(key => {
+                    if (text) text = text[key];
+                });
+
+                if (text) {
+                    // Si es un botón o link con texto simple, o un párrafo
+                    el.innerHTML = text;
+                }
+            });
+
+            // Guardar preferencia y actualizar selectores
+            document.documentElement.lang = lang;
+            localStorage.setItem('language', lang);
+            if (desktopSwitcher) desktopSwitcher.value = lang;
+            if (mobileSwitcher) mobileSwitcher.value = lang;
+
+            console.log("Idioma actualizado a:", lang);
+
+        } catch (err) {
+            console.error("Fallo en la traducción:", err);
+        }
+    }
+
+    // Eventos de cambio
+    [desktopSwitcher, mobileSwitcher].forEach(switcher => {
+        if (switcher) {
+            switcher.addEventListener('change', (e) => loadLanguage(e.target.value));
+        }
+    });
+
+    // Cargar idioma inicial
+    const savedLang = localStorage.getItem('language') || 'es';
+    loadLanguage(savedLang);
+
+// ==========================
+// CONFIGURACIÓN DE GALERÍAS
+// ==========================
+
+const galleries = {
+  pasta: [
+    "imagenes/pasta.png",
+    "imagenes/plato2.png",
+    "imagenes/plato3.png",
+    "imagenes/plato4.png",
+  ],
+  pizza: [
+    "imagenes/pizza-formaggi.png",
+    "imagenes/pizza2.png",
+    "imagenes/pizza3.jpg"
+  ]
+};
+
+let currentGallery = [];
+let currentIndex = 0;
+
+const modal = document.getElementById("gallery-modal");
+const galleryImage = document.getElementById("gallery-image");
+
+// ==========================
+// ABRIR GALERÍA
+// ==========================
+
+function openGallery(type) {
+  // 1. Asignar primero la galería correspondiente
+  currentGallery = galleries[type];
+  currentIndex = 0;
+
+  // 2. Ahora sí comprobamos si hay más de una imagen para precargar
+  if (currentGallery && currentGallery.length > 1) {
+    const preload = new Image();
+    preload.src = currentGallery[1];
+  }
+
+  // 3. Mostrar la imagen
+  galleryImage.src = currentGallery[currentIndex];
+
+  // 4. Bloquear scroll y mostrar modal
+  document.body.style.overflow = "hidden";
+  modal.classList.remove("hidden");
+  modal.classList.add("flex");
+}
+
+// ==========================
+// CERRAR GALERÍA
+// ==========================
+
+function closeGallery() {
+  modal.classList.add("hidden");
+  modal.classList.remove("flex");
+  document.body.style.overflow = "";
+}
+
+
+// ==========================
+// SIGUIENTE / ANTERIOR
+// ==========================
+
+function nextImage() {
+  currentIndex = (currentIndex + 1) % currentGallery.length;
+  fadeImage();
+}
+
+function prevImage() {
+  currentIndex = (currentIndex - 1 + currentGallery.length) % currentGallery.length;
+  fadeImage();
+}
+
+// Animación suave
+function fadeImage() {
+  galleryImage.style.opacity = 0;
+
+  const img = new Image();
+  img.src = currentGallery[currentIndex];
+
+  img.onload = () => {
+    galleryImage.src = img.src;
+    galleryImage.style.opacity = 1;
+  };
+}
+
+// ==========================
+// EVENTOS
+// ==========================
+
+document.getElementById("close-gallery").addEventListener("click", closeGallery);
+document.getElementById("next-btn").addEventListener("click", nextImage);
+document.getElementById("prev-btn").addEventListener("click", prevImage);
+
+// Cerrar al hacer click fuera
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    closeGallery();
+  }
+});
+
+// Cerrar con tecla ESC
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeGallery();
+  }
+});
+
+// ==========================
+// SWIPE PARA MÓVIL
+// ==========================
+
+let startX = 0;
+let endX = 0;
+
+galleryImage.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX;
+}, { passive: true });
+
+galleryImage.addEventListener("touchend", (e) => {
+  endX = e.changedTouches[0].clientX;
+  handleSwipe();
+}, { passive: true });
+
+function handleSwipe() {
+  const threshold = 50; // mínimo movimiento para cambiar
+  const diff = startX - endX;
+
+  if (Math.abs(diff) > threshold) {
+    if (diff > 0) {
+      nextImage(); // swipe izquierda
+    } else {
+      prevImage(); // swipe derecha
+    }
+  }
+}
+
+// --- LÓGICA DEL BOTÓN COMPARTIR ---
+const shareBtn = document.getElementById('share-btn');
+
+if (shareBtn) {
+    shareBtn.addEventListener('click', async () => {
+        const shareData = {
+            title: 'Nonna Giustina',
+            text: 'Descubre la auténtica cocina italiana en Palma de Mallorca.',
+            url: window.location.href
+        };
+
+        try {
+            // Intenta usar la función nativa de compartir (Móviles)
+            if (navigator.share) {
+                await navigator.share(shareData);
+            } else {
+                // Si no puede compartir (PC/Navegadores antiguos), copia al portapapeles
+                await navigator.clipboard.writeText(window.location.href);
+                alert('Enlace copiado al portapapeles');
+            }
+        } catch (err) {
+            console.log('Error al compartir:', err);
+        }
+    });
+}
+    
 </script>
 
-</body></html>
+
+
+</body>
+</html>
